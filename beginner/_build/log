@@ -1,0 +1,16 @@
+# dune exec _build/default/test.exe
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/nicklatcham/.cache/dune/db
+# Workspace root: /home/nicklatcham/Repos/ocaml/ocaml_learn_exercises/beginner
+# Auto-detected concurrency: 20
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/nicklatcham/.opam/default/bin/ocamlc.opt -config > /tmp/dune_d0ab96_output

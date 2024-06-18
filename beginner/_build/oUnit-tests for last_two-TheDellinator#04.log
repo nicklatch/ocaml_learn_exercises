@@ -1,3 +1,8 @@
-2024-06-18T15:41:21+00:00 TheDellinator#04 I: Start test tests for last_two:3:many_elements.
-2024-06-18T15:41:21+00:00 TheDellinator#04 I: Test tests for last_two:3:many_elements is successful.
-2024-06-18T15:41:21+00:00 TheDellinator#04 I: End test tests for last_two:3:many_elements.
+2024-06-18T16:31:49+00:00 TheDellinator#04 I: Start test tests for last_two:3:many_elements.
+2024-06-18T16:31:49+00:00 TheDellinator#04 E: Test tests for last_two:3:many_elements exited with an error.
+2024-06-18T16:31:49+00:00 TheDellinator#04 E: Failure("Testing") in test tests for last_two:3:many_elements.
+2024-06-18T16:31:49+00:00 TheDellinator#04 E: Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
+2024-06-18T16:31:49+00:00 TheDellinator#04 E: Called from Dune__exe__Test.ae.(fun) in file "test.ml", line 13, characters 47-65
+2024-06-18T16:31:49+00:00 TheDellinator#04 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2024-06-18T16:31:49+00:00 TheDellinator#04 E: 
+2024-06-18T16:31:49+00:00 TheDellinator#04 I: End test tests for last_two:3:many_elements.

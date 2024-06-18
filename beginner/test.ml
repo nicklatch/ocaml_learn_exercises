@@ -1,13 +1,19 @@
 open OUnit2
 open Beginner
 
-let test_printer = Printf.sprintf
+let string_of_int_option = function
+  | None -> "None"
+  | Some v -> "Some " ^ string_of_int v
 
-let ae test_name expected ~fn_to_test input =
-  test_name >:: fun _ -> assert_equal expected (fn_to_test input)
+let string_of_int_int_option = function
+  | None -> "None"
+  | Some (v1, v2) -> "Some (" ^ string_of_int v1 ^ ", " ^ string_of_int v2 ^ ")"
+
+let ae test_name expected ~fn_to_test input ~printer =
+  test_name >:: fun _ -> assert_equal expected (fn_to_test input) ~printer
 
 let last_tests =
-  let ae_last = ae ~fn_to_test:last in
+  let ae_last = ae ~fn_to_test:last ~printer:string_of_int_option in
   "tests for last"
   >::: [ ae_last "empty_list" None []
        ; ae_last "one_element" (Some 1) [ 1 ]
@@ -15,7 +21,7 @@ let last_tests =
        ]
 
 let last_two_test =
-  let ae_last_two = ae ~fn_to_test:last_two in
+  let ae_last_two = ae ~fn_to_test:last_two ~printer:string_of_int_int_option in
   "tests for last_two"
   >::: [ ae_last_two "empty_list" None []
        ; ae_last_two "one_element" None [ 1 ]

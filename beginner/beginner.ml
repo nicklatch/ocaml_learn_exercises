@@ -3,7 +3,6 @@ let rec last = function
   | [ x ] -> Some x
   | _ :: t -> last t
 
-
 let rec last_two = function
   | [] | [ _ ] -> None
   | [ h; t ] -> Some (h, t)

@@ -1,5 +1,0 @@
-profile = janestreet
-version = 0.26.2
-indicate-multiline-delimiters = no
-break-cases = toplevel
-let-binding-spacing = compact

@@ -1,0 +1,3 @@
+(test
+  (name beginner_test)
+  (libraries ounit2 exercises))

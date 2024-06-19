@@ -47,12 +47,17 @@ let length_tests =
        ]
 
 let rev_tests =
-  let printer = string_of_list string_of_int in
+  let printer = string_of_a_list string_of_int in
   let ae_rev = ae ~printer in
+  let ae_rev_string_list = ae ~printer:string_of_string_list in
   "test for rev"
   >::: [ ae_rev "empty_list" [] (rev [])
        ; ae_rev "one_element" [ 1 ] (rev [ 1 ])
        ; ae_rev "two_elements" [ 2; 1 ] (rev [ 1; 2 ])
+       ; ae_rev_string_list
+           "muiltple string elements"
+           [ "I"; "am"; "reversed!" ]
+           (rev [ "reversed!"; "am"; "I" ])
        ]
 
 let () =

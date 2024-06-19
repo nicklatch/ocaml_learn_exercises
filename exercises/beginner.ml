@@ -21,7 +21,8 @@ let length list =
 
 let rev list =
   let rec aux acc = function
-    | [] -> []
+    | [] -> acc
+    | [ x ] -> x :: acc
     | h :: t -> aux (h :: acc) t
   in
   aux [] list

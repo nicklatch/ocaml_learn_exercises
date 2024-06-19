@@ -10,11 +10,20 @@ let string_of_int_int_option = function
   | None -> "None"
   | Some (v1, v2) -> "Some (" ^ string_of_int v1 ^ ", " ^ string_of_int v2 ^ ")"
 
-let string_of_list string_of list =
+let string_of_a_list string_of list =
   let rec aux acc = function
     | [] -> "[]"
-    | [ x ] -> string_of x
-    | h :: t -> aux (acc ^ " " ^ string_of h ^ ";") t
+    | [ x ] -> acc ^ string_of x
+    | h :: t -> aux (acc ^ string_of h ^ "; ") t
+  in
+  let contents = aux "" list in
+  "[" ^ contents ^ "]"
+
+let string_of_string_list list =
+  let rec aux acc = function
+    | [] -> "[]"
+    | [ x ] -> acc ^ x
+    | h :: t -> aux (acc ^ h ^ "; ") t
   in
   let contents = aux "" list in
   "[" ^ contents ^ "]"
